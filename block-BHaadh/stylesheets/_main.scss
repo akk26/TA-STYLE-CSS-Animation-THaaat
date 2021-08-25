@@ -1,0 +1,92 @@
+*,
+*::before,
+*::after{
+  box-sizing: border-box;
+}
+.container{
+  max-width: 1320px;
+  width: 100%;
+  margin: 0 auto;
+}
+body{
+  background:linear-gradient( to right, rgb(145, 174, 212), rgb(80,100,130));
+  background-repeat: no-repeat;
+  height: 92.5vh;
+}
+
+
+header{
+  text-align: center;
+  font-size: 2rem;
+  font-weight: 700;
+  color: rgb(255, 255, 255);
+  transition: all 1s linear;
+  width: 20%;
+  margin: 0 auto;
+  &:hover{
+    box-shadow: 0px 0px 0px 3px rgba($color: #e2dada, $alpha: 0.7);
+    width: 20%;
+    margin: 0 auto;
+    color: salmon;
+    transform: scale(1.5) rotate(2turn);
+    background-color: white;
+  }
+  h1{
+    margin-top: 4rem;
+  }
+}
+
+.grid-section{
+ max-width: 1880px; 
+ display: grid;
+ border: 1px solid;
+ gap: 20px;
+ width: 50%;
+ margin: 14rem auto;
+ grid-template-columns: repeat(2,1fr);
+ padding: 2rem;
+ &:hover .box-one{
+   border-radius: 50%;
+   position: relative;
+   transition: all;
+   animation: box-one-animation  linear infinite alternate 1s forwards;
+ }
+  .box-one{
+   background-color: yellowgreen;
+   width: 20%;
+   height: 100px;
+   margin: 0 auto;
+   text-align: center;
+ }
+
+
+ .box-two{
+   background-color: rgb(177, 80, 80);
+   width: 50%;
+   height: 125px;
+   margin: 0 auto;
+   padding: 1.25rem 2rem;
+   img{
+  width: 100%;
+ }
+ &:hover{
+   img{
+     transform: perspective(200px)  scaleZ(5) translateZ(30px);
+   }
+ }
+ }
+ 
+}
+
+
+
+@keyframes box-one-animation {
+  0%{
+    left: 10%;
+    background-color: red;
+  }
+  100%{
+    left: 30%;
+    background-color: white;
+  }
+}
